@@ -1,0 +1,26 @@
+# Code book 
+
+THis is our first analysis study and we are sharing two datasets
+
+## Ejemplo 
+'data/ejemplo.csv'
+This file contains name, lastname and age. 
+
+* **nombre**: this is a name, STRING 
+* **apellido**: this is a lastname, STRING 
+* **edad **:  this is a age,STRING 
+
+
+## List
+
+'''bash
+# Comment something to show multiline code
+data my_file.csv 
+'''
+
+This file contains a list about my family 
+
+
+* **id**:  this is a ID, INTEGER
+* **nombre**: This is a name, STRING
+* **edad**: this is a age, INTEGER
