@@ -1,4 +1,4 @@
-ode book 
+# code book 
 
 THis is our first analysis study and we are sharing two datasets
 
@@ -8,7 +8,7 @@ This file contains name, lastname and age.
 
 * **nombre**: this is a name, STRING 
 * **apellido**: this is a lastname, STRING 
-* **edad **:  this is a age,STRING 
+* **edad**:  this is a age,STRING 
 
 
 ## List
