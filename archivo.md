@@ -3,7 +3,7 @@ ode book
 THis is our first analysis study and we are sharing two datasets
 
 ## Ejemplo 
-'data/ejemplo.csv'
+`data/ejemplo.csv`
 This file contains name, lastname and age. 
 
 * **nombre**: this is a name, STRING 
@@ -12,11 +12,10 @@ This file contains name, lastname and age.
 
 
 ## List
-
-'''bash
+```bash
 # Comment something to show multiline code
 data my_file.csv 
-'''
+```
 
 This file contains a list about my family 
 
