@@ -129,19 +129,41 @@ group_by_mean = grouped.aggregate(mean)
 # Or the short way
 grouped = rated_movies.groupby('title').sum()
 
+grouped_mean = rated_movies.groupby('title').mean()
+#print(grouped_mean)
+agrupar = grouped_mean.to_dict()['rating']
+
+dic={}
+for num in agrupar.values():
+    num = round(num)
+    if num.is_integer():
+        dic[int(num)] = dic.get(num,0)+1
+
+llaves = list(dic.keys())
+valores = list(dic.values())
+print(valores)
+plt.bar(llaves, valores)
+plt.xticks(llaves, llaves);
+plt.title("Ratings de peliculas en promedio")
+plt.ylabel('rating')
+plt.xlabel('valor')
+plt.show()
+
+
 # Subsetting for our results
 top20 = grouped.sort_values('rating', ascending=False)[0:20]
-print(top20.to_dict())
+
+#print(top20.to_dict())
 a = top20.to_dict()
 b = a['rating'].values()
 c = list(b)
-print(c)
+#print(c)
 plt.subplot(2, 1, 1)
 plt.plot(range(20),c, color='green', marker='o', linestyle='solid')
 plt.title("Top 20")
 plt.xlabel("Peliculas")
 plt.ylabel("Rate")
-plt.show()
+#plt.show()
 plt.savefig('ejemplo1.png')
 plt.cla()
 plt.clf()
@@ -151,14 +173,17 @@ top5 = top20[0:5]
 a = top5.to_dict()
 b = a['rating'].values()
 c = list(b)
-print(c)
+#   print(c)
 #plt.subplot(2, 1,1)
 plt.plot(range(5),c, color='blue', marker='o', linestyle='solid')
 plt.title("Top 5")
 plt.xlabel("Peliculas")
 plt.ylabel("Rate")
-plt.show()
+#plt.show()
 plt.savefig('ejemplo2.png')
+plt.cla()
+plt.clf()
+plt.close()
 
 # Wee need to transform it to a dict
 # so we can get the movies' titles
